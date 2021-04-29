@@ -24,7 +24,7 @@ def insert_sort(l):
     sorted_l = [l.pop()]
     while l:
     # for every word / string sequence in the list, do:
-        print(l)
+        #print(l)
         # 1. get the word:
         temp_sequence = l.pop()
         
@@ -32,7 +32,7 @@ def insert_sort(l):
         l_copy = sorted_l
         middle_index = len(l_copy)//2
         while l_copy:
-            print(l_copy, middle_index)
+            #print(l_copy, middle_index)
             # 3. compare every word with the word at middle of the list l_copy 
             loop_No = 0
             w = l_copy[middle_index]
@@ -67,7 +67,6 @@ def insert_sort(l):
                 loop_No += 1
             # 4. after loop chars in temp_sequence,
             #   4.1 if loop No. is same as len(temp_sequence), means that the temp_sequence is subsequence of the word at middle of l_copy, insert it before current middle word,do:
-            #print(loop_No,turn_direction,len(l_copy))
             if loop_No == len(temp_sequence):
                 sorted_l.insert(sorted_l.index(w),temp_sequence)
                 break
@@ -84,6 +83,6 @@ def insert_sort(l):
             #   4.2 if loop No. is not the same as len(temp_sequence), means the chars in temp_sequence has not been completly compared, do:
     return sorted_l
 
-print(insert_sort(string_list))
+#print(insert_sort(string_list))
 
             
